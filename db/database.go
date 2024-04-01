@@ -6,7 +6,6 @@ import (
 	"os"
 	"strconv"
 	"track_doctor/config"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -30,8 +29,7 @@ func ConnectDb() {
 		log.Fatal("Failed to connect database", err)
 		os.Exit(2)
 	}
-	log.Println("Connected")
-	fmt.Println("DB connected")
+	log.Println("DB Connection Successfull")
 	DB = DbInstance{
 		Db: db,
 	}
